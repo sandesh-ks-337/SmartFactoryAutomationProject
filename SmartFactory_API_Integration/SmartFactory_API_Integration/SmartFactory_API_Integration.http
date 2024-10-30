@@ -1,0 +1,6 @@
+@SmartFactory_API_Integration_HostAddress = http://localhost:5199
+
+GET {{SmartFactory_API_Integration_HostAddress}}/api/
+Accept: application/json
+
+###
