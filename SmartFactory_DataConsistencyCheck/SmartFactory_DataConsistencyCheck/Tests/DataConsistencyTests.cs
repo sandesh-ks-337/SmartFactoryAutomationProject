@@ -30,12 +30,10 @@ namespace SmartFactory_DataConsistencyCheck.Tests
                 { 1, new Order { Id = 1, ProductId = 1, Quantity = 2, TotalPrice = 200 } },
                 { 2, new Order { Id = 2, ProductId = 2, Quantity = 1, TotalPrice = 200 } }
             };
-
-            // Setup GetOrderByIdAsync to retrieve orders from the in-memory store
+            
             _orderDataSourceMock.Setup(ds => ds.GetOrderByIdAsync(It.IsAny<int>()))
                 .ReturnsAsync((int id) => _orderStore.ContainsKey(id) ? _orderStore[id] : null);
 
-            // Setup UpdateOrderAsync to modify orders in the in-memory store
             _orderDataSourceMock.Setup(ds => ds.UpdateOrderAsync(It.IsAny<int>(), It.IsAny<Order>()))
                 .Callback<int, Order>((id, updatedOrder) =>
                 {
@@ -62,7 +60,7 @@ namespace SmartFactory_DataConsistencyCheck.Tests
             // Act
             var result = await _productDataSourceMock.Object.GetAllProductsAsync();
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsNotNull(result);
             ClassicAssert.AreEqual(products.Count, result.Count());
             ClassicAssert.AreEqual(products.First().Id, result.First().Id);
@@ -83,7 +81,7 @@ namespace SmartFactory_DataConsistencyCheck.Tests
             // Act
             var result = await _orderDataSourceMock.Object.GetAllOrdersAsync();
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsNotNull(result);
             ClassicAssert.AreEqual(orders.Count, result.Count());
             ClassicAssert.AreEqual(orders.First().Id, result.First().Id);
@@ -96,16 +94,15 @@ namespace SmartFactory_DataConsistencyCheck.Tests
             var newDetails1 = new Order { Id = orderId, ProductId = 3, Quantity = 5, TotalPrice = 500 };
             var newDetails2 = new Order { Id = orderId, ProductId = 4, Quantity = 7, TotalPrice = 700 };
 
-            // Act - Simulate concurrent updates
+            // Act
             var task1 = Task.Run(() => _orderDataSourceMock.Object.UpdateOrderAsync(orderId, newDetails1));
             var task2 = Task.Run(() => _orderDataSourceMock.Object.UpdateOrderAsync(orderId, newDetails2));
 
             await Task.WhenAll(task1, task2);
 
-            // Retrieve the final state of the order
             var result = await _orderDataSourceMock.Object.GetOrderByIdAsync(orderId);
 
-            // Assert - Check if the final state matches one of the updates, showing consistency in end state
+            // Assert
             Assert.That(result, Is.Not.Null);
             Assert.That(result.ProductId, Is.InRange(3, 4));
             Assert.That(result.Quantity, Is.InRange(5, 7));
@@ -123,13 +120,13 @@ namespace SmartFactory_DataConsistencyCheck.Tests
 
             _orderDataSourceMock.Setup(ds => ds.GetAllOrdersAsync()).ReturnsAsync(originalOrders);
 
-            // Act - Modify only one order
+            // Act
             var newDetails = new Order { Id = 1, ProductId = 5, Quantity = 4, TotalPrice = 800 };
             await _orderDataSourceMock.Object.UpdateOrderAsync(1, newDetails);
 
             var allOrders = await _orderDataSourceMock.Object.GetAllOrdersAsync();
 
-            // Assert - Verify other orders are unaffected
+            // Assert
             Assert.That(allOrders.First(o => o.Id == 2).ProductId, Is.EqualTo(2));
             Assert.That(allOrders.First(o => o.Id == 2).Quantity, Is.EqualTo(3));
             Assert.That(allOrders.First(o => o.Id == 2).TotalPrice, Is.EqualTo(600));
@@ -144,14 +141,11 @@ namespace SmartFactory_DataConsistencyCheck.Tests
             var updatedOrder1 = new Order { Id = orderId, ProductId = 1, Quantity = 2, TotalPrice = 200 };
             var updatedOrder2 = new Order { Id = orderId, ProductId = 1, Quantity = 3, TotalPrice = 300 };
 
-            // Setting up the initial state of the order
             _orderDataSourceMock.Setup(o => o.GetOrderByIdAsync(orderId)).ReturnsAsync(originalOrder);
 
-            // Mocking the update behavior
             _orderDataSourceMock.Setup(o => o.UpdateOrderAsync(orderId, It.IsAny<Order>()))
                 .Callback<int, Order>((id, order) =>
                 {
-                    // Update logic that simulates the behavior of updating the order
                     if (order.Id == orderId)
                     {
                         originalOrder.ProductId = order.ProductId;
@@ -160,16 +154,14 @@ namespace SmartFactory_DataConsistencyCheck.Tests
                     }
                 });
 
-            // Act - Simulate concurrent updates
             var task1 = Task.Run(() => _orderDataSourceMock.Object.UpdateOrderAsync(orderId, updatedOrder1));
             var task2 = Task.Run(() => _orderDataSourceMock.Object.UpdateOrderAsync(orderId, updatedOrder2));
 
             await Task.WhenAll(task1, task2);
 
-            // Retrieve the final state of the order
             var result = await _orderDataSourceMock.Object.GetOrderByIdAsync(orderId);
 
-            // Assert - Check if the final state matches the last updated order
+            // Assert
             Assert.That(result, Is.Not.Null);
             Assert.That(result.TotalPrice, Is.EqualTo(updatedOrder2.TotalPrice)); // Final price should be 300
             Assert.That(result.Quantity, Is.EqualTo(updatedOrder2.Quantity)); // Final quantity should be 3
@@ -209,7 +201,7 @@ namespace SmartFactory_DataConsistencyCheck.Tests
             var orderId = 1;
             var productId = 1;
             var quantity = 2;
-            var pricePerUnit = 100m; // Price per unit of the product
+            var pricePerUnit = 100m;
             var expectedTotalPrice = pricePerUnit * quantity; // Expected total price
 
             var order = new Order
@@ -220,7 +212,6 @@ namespace SmartFactory_DataConsistencyCheck.Tests
                 TotalPrice = expectedTotalPrice
             };
 
-            // Setup the mock to return the order when requested
             _orderDataSourceMock.Setup(o => o.GetOrderByIdAsync(orderId)).ReturnsAsync(order);
 
             // Act

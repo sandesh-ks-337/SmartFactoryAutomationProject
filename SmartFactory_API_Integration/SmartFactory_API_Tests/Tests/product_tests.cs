@@ -21,7 +21,7 @@ namespace SmartFactory_API_Tests.Tests
             if (productsField != null)
             {
                 var products = (List<Product>)productsField.GetValue(null);
-                products.Clear(); // Clear the list before each test
+                products.Clear();
             }
         }
 
@@ -37,7 +37,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.GetAllProducts();
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<ActionResult<IEnumerable<Product>>>(result);
             var okResult = result.Result as OkObjectResult;
             ClassicAssert.IsNotNull(okResult, "Expected OkObjectResult but received null.");
@@ -57,12 +57,12 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.GetProductById(1); // Assuming ID 1 for the created product
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<ActionResult<Product>>(result);
-            var okResult = result.Result as OkObjectResult; // Cast to OkObjectResult
+            var okResult = result.Result as OkObjectResult;
             ClassicAssert.IsNotNull(okResult, "Expected OkObjectResult but received null.");
 
-            var returnedProduct = okResult.Value as Product; // Access the Value property
+            var returnedProduct = okResult.Value as Product;
             ClassicAssert.IsNotNull(returnedProduct, "Expected a Product object but received null.");
             ClassicAssert.AreEqual("Test Product", returnedProduct.Name);
             ClassicAssert.AreEqual("Test Description", returnedProduct.Description);
@@ -75,7 +75,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.GetProductById(999); // Assuming ID 999 does not exist
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<ActionResult<Product>>(result);
             ClassicAssert.IsInstanceOf<NotFoundResult>(result.Result);
         }
@@ -89,12 +89,12 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.CreateProduct(product);
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<ActionResult<Product>>(result);
-            var createdResult = result.Result as CreatedAtActionResult; // Cast to CreatedAtActionResult
+            var createdResult = result.Result as CreatedAtActionResult;
             ClassicAssert.IsNotNull(createdResult, "Expected CreatedAtActionResult but received null.");
 
-            var returnedProduct = createdResult.Value as Product; // Access the Value property
+            var returnedProduct = createdResult.Value as Product;
             ClassicAssert.IsNotNull(returnedProduct, "Expected a Product object but received null.");
             ClassicAssert.AreEqual("New Product", returnedProduct.Name);
             ClassicAssert.AreEqual("New Description", returnedProduct.Description);
@@ -113,7 +113,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.UpdateProduct(1, updatedProduct); // Update product with ID 1
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<IActionResult>(result);
             ClassicAssert.IsInstanceOf<NoContentResult>(result);
         }
@@ -127,7 +127,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.UpdateProduct(999, updatedProduct); // Update product with ID 999
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<IActionResult>(result);
             ClassicAssert.IsInstanceOf<NotFoundResult>(result);
         }
@@ -142,7 +142,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.DeleteProduct(1); // Delete product with ID 1
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<IActionResult>(result);
             ClassicAssert.IsInstanceOf<NoContentResult>(result);
         }

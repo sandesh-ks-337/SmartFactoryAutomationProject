@@ -27,10 +27,8 @@ namespace SmartFactory_API_Tests.Tests
             var order1 = new Order { Id = 1, ProductId = 1, Quantity = 2 };
             var order2 = new Order { Id = 2, ProductId = 2, Quantity = 3 };
 
-            // Create the expected list of orders
             var expectedOrders = new List<Order> { order1, order2 };
 
-            // Add the expected orders to the controller
             _controller.CreateOrder(order1);
             _controller.CreateOrder(order2);
 
@@ -89,7 +87,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.CreateOrder(order);
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<CreatedAtActionResult>(result.Result);
             var createdResult = result.Result as CreatedAtActionResult;
             ClassicAssert.IsInstanceOf<Order>(createdResult.Value);
@@ -111,7 +109,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.UpdateOrder(orderId, updatedOrder);
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<NoContentResult>(result);
         }
 
@@ -124,7 +122,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.UpdateOrder(999, updatedOrder); // Assume this ID does not exist
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<NotFoundResult>(result);
         }
 
@@ -140,7 +138,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.DeleteOrder(orderId);
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<NoContentResult>(result);
         }
 
@@ -150,7 +148,7 @@ namespace SmartFactory_API_Tests.Tests
             // Act
             var result = _controller.DeleteOrder(999); // Assume this ID does not exist
 
-            // ClassicAssert
+            // Assert
             ClassicAssert.IsInstanceOf<NotFoundResult>(result);
         }
     }
