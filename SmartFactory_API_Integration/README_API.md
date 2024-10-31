@@ -9,6 +9,23 @@ The SmartFactory API Integration project is designed to facilitate the managemen
 - Integration with Swagger for API testing and documentation.
 - Automated unit tests to ensure functionality and reliability.
 
+## Folder Structure
+
+SmartFactory_API_Integration
+├── Controllers
+│   ├── OrderController.cs
+│   └── ProductController.cs
+├── Models
+│   ├── Order.cs
+│   └── Product.cs
+│
+└── Program.cs
+
+SmartFactory_API_Test
+└── Tests
+      ├── order_tests.cs
+      └── product_tests.cs
+
 ## Installation
 1. Clone the repository:
     git clone https://github.com/sandesh-ks-337/SmartFactoryAutomationProject.git
@@ -38,6 +55,6 @@ To retrieve all orders: GET /api/orders
 To run the unit tests, navigate to the test project directory and execute: 
 dotnet test
 
-API Documentation
+#API Documentation
 API endpoints can be tested and documented using Swagger, which is available at: http://localhost:5199/swagger
 

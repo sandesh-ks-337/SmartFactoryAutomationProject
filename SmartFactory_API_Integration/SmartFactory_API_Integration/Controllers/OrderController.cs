@@ -43,7 +43,7 @@ namespace SmartFactory_ITOT_Integration.Controllers
                 return Conflict(new { message = $"Order with ID {order.Id} already exists." });
             }
 
-            order.OrderDate = DateTime.UtcNow; // Set the order date
+            order.OrderDate = DateTime.UtcNow;
             Orders.Add(order);
             return CreatedAtAction(nameof(GetOrderById), new { id = order.Id }, order);
         }
@@ -59,7 +59,7 @@ namespace SmartFactory_ITOT_Integration.Controllers
             }
             order.ProductId = updatedOrder.ProductId;
             order.Quantity = updatedOrder.Quantity;
-            return NoContent(); // 204 No Content
+            return NoContent();
         }
 
         // DELETE: /order/{id}
@@ -72,7 +72,7 @@ namespace SmartFactory_ITOT_Integration.Controllers
                 return NotFound();
             }
             Orders.Remove(order);
-            return NoContent(); // 204 No Content
+            return NoContent();
         }
     }
 }

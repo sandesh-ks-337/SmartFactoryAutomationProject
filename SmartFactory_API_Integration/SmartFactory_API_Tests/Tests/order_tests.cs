@@ -18,8 +18,6 @@ namespace SmartFactory_API_Tests.Tests
         public void Setup()
         {
             _controller = new OrderController();
-            // No need for DeleteAllOrders, directly clear orders in each test
-            // _controller.DeleteAllOrders(); 
         }
 
         [Test]

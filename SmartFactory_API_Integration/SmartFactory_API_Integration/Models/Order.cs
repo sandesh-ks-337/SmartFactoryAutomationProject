@@ -2,9 +2,9 @@
 {
     public class Order
     {
-        public int Id { get; set; }  // Unique identifier for the order
-        public int ProductId { get; set; }  // ID of the product being ordered
-        public int Quantity { get; set; }  // Quantity of the product ordered
-        public DateTime OrderDate { get; set; }  // Date when the order was placed
+        public int Id { get; set; }
+        public int ProductId { get; set; }
+        public int Quantity { get; set; }
+        public DateTime OrderDate { get; set; } 
     }
 }

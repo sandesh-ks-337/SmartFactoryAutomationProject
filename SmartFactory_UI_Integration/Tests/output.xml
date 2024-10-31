@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-10-31T17:09:13.302736" rpa="false" schemaversion="5">
+<suite id="s1" name="Ui Tests" source="C:\Users\Meghana\Desktop\SmartFactoryProject\SmartFactoryAutomationProject\SmartFactory_UI_Integration\tests\ui_tests.robot">
+<test id="s1-t1" name="Validate Configuration Page Loads" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:14.826196" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Meghana/Desktop/SmartFactoryProject/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'.</msg>
+<arg>${URL_CONFIG}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-31T17:09:14.825854" elapsed="2.736794"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:17.573169" level="INFO">Page title is 'Configuration Settings'.</msg>
+<arg>Configuration Settings</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-10-31T17:09:17.563429" elapsed="0.009973"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:17.612600" level="INFO">Current page contains text 'Configuration Settings'.</msg>
+<arg>Configuration Settings</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-31T17:09:17.575836" elapsed="0.036958"/>
+</kw>
+<status status="PASS" start="2024-10-31T17:09:14.824029" elapsed="2.792026"/>
+</test>
+<test id="s1-t2" name="Test Save Config Button" line="16">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-10-31T17:09:17.626103" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Meghana/Desktop/SmartFactoryProject/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'.</msg>
+<arg>${URL_CONFIG}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-31T17:09:17.625631" elapsed="2.574723"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:20.207603" level="INFO">Typing text '30' into text field 'id=syncInterval'.</msg>
+<arg>id=syncInterval</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-31T17:09:20.206621" elapsed="0.198678"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:20.406312" level="INFO">Clicking button 'id=saveConfigButton'.</msg>
+<arg>id=saveConfigButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-31T17:09:20.405840" elapsed="0.122375"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-31T17:09:21.529651" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-31T17:09:20.528881" elapsed="1.001170"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:21.532369" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-10-31T17:09:21.531648" elapsed="0.028814"/>
+</kw>
+<status status="PASS" start="2024-10-31T17:09:17.624550" elapsed="3.938492"/>
+</test>
+<test id="s1-t3" name="Validate Dashboard Page Loads" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:21.579768" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Meghana/Desktop/SmartFactoryProject/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'.</msg>
+<arg>${URL_DASHBOARD}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-31T17:09:21.577535" elapsed="2.829713"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:24.696266" level="INFO">Page title is 'Dashboard'.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-10-31T17:09:24.413936" elapsed="0.282541"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:24.749845" level="INFO">Current page contains text 'Dashboard'.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-31T17:09:24.707516" elapsed="0.042803"/>
+</kw>
+<status status="PASS" start="2024-10-31T17:09:21.575291" elapsed="3.177803"/>
+</test>
+<test id="s1-t4" name="Check Inventory Refresh Button" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-10-31T17:09:24.759448" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Meghana/Desktop/SmartFactoryProject/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'.</msg>
+<arg>${URL_DASHBOARD}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-31T17:09:24.759042" elapsed="3.007584"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:27.781432" level="INFO">Clicking button 'id=refreshButton'.</msg>
+<arg>id=refreshButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-31T17:09:27.780916" elapsed="0.259582"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-31T17:09:29.042256" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-31T17:09:28.041087" elapsed="1.001718"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:29.045328" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-10-31T17:09:29.044529" elapsed="0.066543"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:29.161840" level="INFO">Current page contains text 'Current Inventory:'.</msg>
+<arg>Current Inventory:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-31T17:09:29.114664" elapsed="0.047282"/>
+</kw>
+<status status="PASS" start="2024-10-31T17:09:24.756041" elapsed="4.406396"/>
+</test>
+<test id="s1-t5" name="Check Sync Interval Value After Saving" line="35">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-10-31T17:09:29.164607" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Meghana/Desktop/SmartFactoryProject/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'.</msg>
+<arg>${URL_CONFIG}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-31T17:09:29.164316" elapsed="2.621872"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:31.787407" level="INFO">Typing text '30' into text field 'id=syncInterval'.</msg>
+<arg>id=syncInterval</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-31T17:09:31.786859" elapsed="0.201489"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:31.989243" level="INFO">Clicking button 'id=saveConfigButton'.</msg>
+<arg>id=saveConfigButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-31T17:09:31.988891" elapsed="0.108436"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:32.101821" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-10-31T17:09:32.101538" elapsed="0.008075"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-31T17:09:34.110853" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-31T17:09:32.110364" elapsed="2.000617"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-10-31T17:09:34.138023" level="INFO">${sync_value} = 30</msg>
+<var>${sync_value}</var>
+<arg>id=syncInterval</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-31T17:09:34.111599" elapsed="0.026525"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${sync_value}</arg>
+<arg>30</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-31T17:09:34.138524" elapsed="0.000543"/>
+</kw>
+<status status="PASS" start="2024-10-31T17:09:29.163665" elapsed="4.976519"/>
+</test>
+<status status="PASS" start="2024-10-31T17:09:13.305138" elapsed="20.836782"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Ui Tests">Ui Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-31T17:09:14.820437" level="ERROR">Error in file 'C:\Users\Meghana\Desktop\SmartFactoryProject\SmartFactoryAutomationProject\SmartFactory_UI_Integration\tests\ui_tests.robot' on line 4: Library setting requires value.</msg>
+</errors>
+</robot>

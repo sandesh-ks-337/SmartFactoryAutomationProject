@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Settings</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Add styles -->
+</head>
+<body>
+    <h1>Configuration Settings</h1>
+    <form id="configForm">
+        <label for="syncInterval">Sync Interval (in seconds):</label>
+        <input type="text" id="syncInterval" name="syncInterval" required>
+        <button type="submit" id="saveConfigButton">Save</button>
+    </form>
+    <script>
+        document.getElementById('configForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent default form submission
+            alert("Configuration Saved!"); // Simulate saving configuration
+        };
+    </script>
+</body>
+</html>
