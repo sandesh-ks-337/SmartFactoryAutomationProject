@@ -1,263 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-13T21:02:26.740708" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-14T01:20:44.768749" rpa="false" schemaversion="5">
 <suite id="s1" name="Ui Tests" source="C:\Users\Sunil Bangalore\Desktop\SmmartFactoryProject_2\SmartFactoryAutomationProject\SmartFactory_UI_Integration\tests\ui_tests.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-11-13T21:02:27.703228" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'.</msg>
+<msg time="2024-11-14T01:20:45.765989" level="INFO">Opening browser 'chrome' to base url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'.</msg>
 <arg>${URL_DASHBOARD}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-13T21:02:27.702878" elapsed="1.877396"/>
+<status status="PASS" start="2024-11-14T01:20:45.765567" elapsed="3.160166"/>
 </kw>
 <test id="s1-t1" name="Validate Dashboard Page Loads Correctly" line="14">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.581898" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'</msg>
+<msg time="2024-11-14T01:20:48.928469" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'</msg>
 <arg>${URL_DASHBOARD}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.581582" elapsed="0.037854"/>
+<status status="PASS" start="2024-11-14T01:20:48.927763" elapsed="0.025114"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.632398" level="INFO">Page title is 'Dashboard'.</msg>
+<msg time="2024-11-14T01:20:48.966134" level="INFO">Page title is 'Dashboard'.</msg>
 <arg>Dashboard</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.620377" elapsed="0.012193"/>
+<status status="PASS" start="2024-11-14T01:20:48.953492" elapsed="0.012853"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.668847" level="INFO">Current page contains text 'Dashboard'.</msg>
+<msg time="2024-11-14T01:20:49.006168" level="INFO">Current page contains text 'Dashboard'.</msg>
 <arg>Dashboard</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.633251" elapsed="0.035717"/>
+<status status="PASS" start="2024-11-14T01:20:48.966869" elapsed="0.039432"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.697136" level="INFO">Current page contains element 'id=inventoryStatus'.</msg>
+<msg time="2024-11-14T01:20:49.026978" level="INFO">Current page contains element 'id=inventoryStatus'.</msg>
 <arg>id=inventoryStatus</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.669579" elapsed="0.027743"/>
+<status status="PASS" start="2024-11-14T01:20:49.006990" elapsed="0.020126"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.730583" level="INFO">Current page contains element 'id=recentOrders'.</msg>
+<msg time="2024-11-14T01:20:49.050414" level="INFO">Current page contains element 'id=recentOrders'.</msg>
 <arg>id=recentOrders</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.698021" elapsed="0.032754"/>
+<status status="PASS" start="2024-11-14T01:20:49.028178" elapsed="0.022440"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.762299" level="INFO">Current page contains element 'id=status'.</msg>
+<msg time="2024-11-14T01:20:49.073154" level="INFO">Current page contains element 'id=status'.</msg>
 <arg>id=status</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.731316" elapsed="0.031128"/>
+<status status="PASS" start="2024-11-14T01:20:49.051101" elapsed="0.022292"/>
 </kw>
-<status status="PASS" start="2024-11-13T21:02:29.580678" elapsed="0.182363"/>
+<status status="PASS" start="2024-11-14T01:20:48.926241" elapsed="0.147863"/>
 </test>
 <test id="s1-t2" name="Check Real-Time Inventory Refresh" line="22">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.765807" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'</msg>
+<msg time="2024-11-14T01:20:49.077684" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'</msg>
 <arg>${URL_DASHBOARD}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.765414" elapsed="0.033735"/>
+<status status="PASS" start="2024-11-14T01:20:49.077223" elapsed="0.033686"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.850547" level="INFO">${initial_inventory} = Current Inventory: 100 items</msg>
+<msg time="2024-11-14T01:20:49.165368" level="INFO">${initial_inventory} = Current Inventory: 100 items</msg>
 <var>${initial_inventory}</var>
 <arg>id=inventoryStatus</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.799846" elapsed="0.050770"/>
+<status status="PASS" start="2024-11-14T01:20:49.111892" elapsed="0.053547"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:29.851393" level="INFO">Clicking button 'id=refreshButton'.</msg>
+<msg time="2024-11-14T01:20:49.166418" level="INFO">Clicking button 'id=refreshButton'.</msg>
 <arg>id=refreshButton</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:29.851105" elapsed="0.177651"/>
+<status status="PASS" start="2024-11-14T01:20:49.165986" elapsed="0.181123"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-13T21:02:31.030197" level="INFO">Slept 1 second.</msg>
+<msg time="2024-11-14T01:20:50.348425" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-13T21:02:30.029395" elapsed="1.000966"/>
+<status status="PASS" start="2024-11-14T01:20:49.347755" elapsed="1.001011"/>
 </kw>
 <kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.031179" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2024-11-14T01:20:50.349985" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
 <doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.030912" elapsed="0.006655"/>
+<status status="PASS" start="2024-11-14T01:20:50.349636" elapsed="0.007992"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.062621" level="INFO">${updated_inventory} = Current Inventory: 79 items</msg>
+<msg time="2024-11-14T01:20:50.391885" level="INFO">${updated_inventory} = Current Inventory: 174 items</msg>
 <var>${updated_inventory}</var>
 <arg>id=inventoryStatus</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.038132" elapsed="0.024555"/>
+<status status="PASS" start="2024-11-14T01:20:50.358343" elapsed="0.033644"/>
 </kw>
 <kw name="Should Not Be Equal" owner="BuiltIn">
 <arg>${initial_inventory}</arg>
 <arg>${updated_inventory}</arg>
 <doc>Fails if the given objects are equal.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.063085" elapsed="0.000290"/>
+<status status="PASS" start="2024-11-14T01:20:50.392837" elapsed="0.001425"/>
 </kw>
 <kw name="Should Match Regexp" owner="BuiltIn">
 <arg>${updated_inventory}</arg>
 <arg>Current Inventory: \\d+ items</arg>
 <doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.063620" elapsed="0.000337"/>
+<status status="PASS" start="2024-11-14T01:20:50.395445" elapsed="0.001881"/>
 </kw>
-<status status="PASS" start="2024-11-13T21:02:29.764428" elapsed="1.299781"/>
+<status status="PASS" start="2024-11-14T01:20:49.075916" elapsed="1.322779"/>
 </test>
 <test id="s1-t3" name="Validate Recent Orders Section" line="32">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.067290" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'</msg>
+<msg time="2024-11-14T01:20:50.403260" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'</msg>
 <arg>${URL_DASHBOARD}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.065834" elapsed="0.034309"/>
+<status status="PASS" start="2024-11-14T01:20:50.401940" elapsed="0.032200"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.129943" level="INFO">Current page contains text 'Recent Orders'.</msg>
+<msg time="2024-11-14T01:20:50.462250" level="INFO">Current page contains text 'Recent Orders'.</msg>
 <arg>Recent Orders</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.101149" elapsed="0.028897"/>
+<status status="PASS" start="2024-11-14T01:20:50.434708" elapsed="0.027903"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.156155" level="INFO">Current page contains text 'No recent orders.'.</msg>
+<msg time="2024-11-14T01:20:50.497969" level="INFO">Current page contains text 'No recent orders.'.</msg>
 <arg>No recent orders.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.130575" elapsed="0.025807"/>
+<status status="PASS" start="2024-11-14T01:20:50.464648" elapsed="0.033899"/>
 </kw>
-<status status="PASS" start="2024-11-13T21:02:31.065073" elapsed="0.092079"/>
+<status status="PASS" start="2024-11-14T01:20:50.400826" elapsed="0.101888"/>
 </test>
 <test id="s1-t4" name="Validate System Status Display" line="37">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.160422" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'</msg>
+<msg time="2024-11-14T01:20:50.505361" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/dashboard.html'</msg>
 <arg>${URL_DASHBOARD}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.159947" elapsed="0.029321"/>
+<status status="PASS" start="2024-11-14T01:20:50.504788" elapsed="0.025442"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.225124" level="INFO">Current page contains text 'System Status'.</msg>
+<msg time="2024-11-14T01:20:50.564655" level="INFO">Current page contains text 'System Status'.</msg>
 <arg>System Status</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.190143" elapsed="0.035188"/>
+<status status="PASS" start="2024-11-14T01:20:50.531427" elapsed="0.033743"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.253232" level="INFO">${status} = Online</msg>
+<msg time="2024-11-14T01:20:50.615826" level="INFO">${status} = Online</msg>
 <var>${status}</var>
 <arg>id=status</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.225855" elapsed="0.027600"/>
+<status status="PASS" start="2024-11-14T01:20:50.566311" elapsed="0.050354"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${status}</arg>
 <arg>Online</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.253900" elapsed="0.000311"/>
+<status status="PASS" start="2024-11-14T01:20:50.617702" elapsed="0.001371"/>
 </kw>
-<status status="PASS" start="2024-11-13T21:02:31.159105" elapsed="0.095428"/>
+<status status="PASS" start="2024-11-14T01:20:50.503884" elapsed="0.116300"/>
 </test>
 <test id="s1-t5" name="Validate Configuration Page Loads Correctly" line="43">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.257683" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'</msg>
+<msg time="2024-11-14T01:20:50.625970" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'</msg>
 <arg>${URL_CONFIG}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.257297" elapsed="0.040144"/>
+<status status="PASS" start="2024-11-14T01:20:50.625048" elapsed="0.062943"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.310396" level="INFO">Page title is 'Configuration Settings'.</msg>
+<msg time="2024-11-14T01:20:50.699741" level="INFO">Page title is 'Configuration Settings'.</msg>
 <arg>Configuration Settings</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.298163" elapsed="0.012464"/>
+<status status="PASS" start="2024-11-14T01:20:50.688876" elapsed="0.011299"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.336975" level="INFO">Current page contains text 'Configuration Settings'.</msg>
+<msg time="2024-11-14T01:20:50.738583" level="INFO">Current page contains text 'Configuration Settings'.</msg>
 <arg>Configuration Settings</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.311485" elapsed="0.025713"/>
+<status status="PASS" start="2024-11-14T01:20:50.701396" elapsed="0.037487"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.358581" level="INFO">Current page contains element 'id=syncInterval'.</msg>
+<msg time="2024-11-14T01:20:50.765154" level="INFO">Current page contains element 'id=syncInterval'.</msg>
 <arg>id=syncInterval</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.337715" elapsed="0.021028"/>
+<status status="PASS" start="2024-11-14T01:20:50.739659" elapsed="0.025816"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.376363" level="INFO">Current page contains element 'id=authParam'.</msg>
+<msg time="2024-11-14T01:20:50.795489" level="INFO">Current page contains element 'id=authParam'.</msg>
 <arg>id=authParam</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.359214" elapsed="0.017299"/>
+<status status="PASS" start="2024-11-14T01:20:50.766446" elapsed="0.029256"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.396571" level="INFO">Current page contains element 'id=saveConfigButton'.</msg>
+<msg time="2024-11-14T01:20:50.828130" level="INFO">Current page contains element 'id=saveConfigButton'.</msg>
 <arg>id=saveConfigButton</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.376892" elapsed="0.019875"/>
+<status status="PASS" start="2024-11-14T01:20:50.796461" elapsed="0.031901"/>
 </kw>
-<status status="PASS" start="2024-11-13T21:02:31.255899" elapsed="0.141476"/>
+<status status="PASS" start="2024-11-14T01:20:50.622838" elapsed="0.206103"/>
 </test>
 <test id="s1-t6" name="Test Sync Interval and Authentication Parameter Input" line="51">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.399794" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'</msg>
+<msg time="2024-11-14T01:20:50.832786" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'</msg>
 <arg>${URL_CONFIG}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.399556" elapsed="0.022548"/>
+<status status="PASS" start="2024-11-14T01:20:50.832142" elapsed="0.027615"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.423027" level="INFO">Typing text '30' into text field 'id=syncInterval'.</msg>
+<msg time="2024-11-14T01:20:50.861429" level="INFO">Typing text '30' into text field 'id=syncInterval'.</msg>
 <arg>id=syncInterval</arg>
 <arg>30</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.422665" elapsed="0.199223"/>
+<status status="PASS" start="2024-11-14T01:20:50.860782" elapsed="0.241567"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.622924" level="INFO">Typing text 'secret_auth_key' into text field 'id=authParam'.</msg>
+<msg time="2024-11-14T01:20:51.103774" level="INFO">Typing text 'secret_auth_key' into text field 'id=authParam'.</msg>
 <arg>id=authParam</arg>
 <arg>secret_auth_key</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.622524" elapsed="0.239904"/>
+<status status="PASS" start="2024-11-14T01:20:51.103136" elapsed="0.290624"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.863160" level="INFO">Clicking button 'id=saveConfigButton'.</msg>
+<msg time="2024-11-14T01:20:51.394664" level="INFO">Clicking button 'id=saveConfigButton'.</msg>
 <arg>id=saveConfigButton</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.862879" elapsed="0.127074"/>
+<status status="PASS" start="2024-11-14T01:20:51.394295" elapsed="0.154879"/>
 </kw>
 <kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:31.990802" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2024-11-14T01:20:51.550228" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
 <doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2024-11-13T21:02:31.990552" elapsed="0.010766"/>
+<status status="PASS" start="2024-11-14T01:20:51.549866" elapsed="0.011464"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:32.002710" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'</msg>
+<msg time="2024-11-14T01:20:51.563459" level="INFO">Opening url 'file:///C:/Users/Sunil Bangalore/Desktop/SmmartFactoryProject_2/SmartFactoryAutomationProject/SmartFactory_UI_Integration/UI/config.html'</msg>
 <arg>${URL_CONFIG}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-13T21:02:32.002439" elapsed="0.031007"/>
+<status status="PASS" start="2024-11-14T01:20:51.562728" elapsed="0.038909"/>
 </kw>
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:32.068573" level="INFO">${sync_value} = 30</msg>
+<msg time="2024-11-14T01:20:51.641612" level="INFO">${sync_value} = 30</msg>
 <var>${sync_value}</var>
 <arg>id=syncInterval</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:32.034251" elapsed="0.034444"/>
+<status status="PASS" start="2024-11-14T01:20:51.602455" elapsed="0.039282"/>
 </kw>
 <kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2024-11-13T21:02:32.093450" level="INFO">${auth_value} = secret_auth_key</msg>
+<msg time="2024-11-14T01:20:51.677393" level="INFO">${auth_value} = secret_auth_key</msg>
 <var>${auth_value}</var>
 <arg>id=authParam</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T21:02:32.069642" elapsed="0.023927"/>
+<status status="PASS" start="2024-11-14T01:20:51.643017" elapsed="0.034495"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${sync_value}</arg>
 <arg>30</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-13T21:02:32.094326" elapsed="0.000722"/>
+<status status="PASS" start="2024-11-14T01:20:51.678256" elapsed="0.000573"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${auth_value}</arg>
 <arg>secret_auth_key</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-13T21:02:32.095927" elapsed="0.000473"/>
+<status status="PASS" start="2024-11-14T01:20:51.681056" elapsed="0.001044"/>
 </kw>
-<status status="PASS" start="2024-11-13T21:02:31.398809" elapsed="0.698083"/>
+<status status="PASS" start="2024-11-14T01:20:50.830545" elapsed="0.852656"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-13T21:02:32.098401" elapsed="2.224443"/>
+<status status="PASS" start="2024-11-14T01:20:51.686150" elapsed="2.266476"/>
 </kw>
-<status status="PASS" start="2024-11-13T21:02:26.743252" elapsed="7.579836"/>
+<status status="PASS" start="2024-11-14T01:20:44.771408" elapsed="9.181454"/>
 </suite>
 <statistics>
 <total>

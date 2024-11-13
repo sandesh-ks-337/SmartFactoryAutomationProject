@@ -17,13 +17,11 @@
         <button type="submit" id="saveConfigButton">Save</button>
     </form>
     <script>
-        // Load saved values from localStorage if they exist
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('syncInterval').value = localStorage.getItem('syncInterval') || '';
             document.getElementById('authParam').value = localStorage.getItem('authParam') || '';
         });
 
-        // Save values to localStorage on form submission
         document.getElementById('configForm').onsubmit = function(event) {
             event.preventDefault();
             localStorage.setItem('syncInterval', document.getElementById('syncInterval').value);
