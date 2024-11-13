@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configuration Settings</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: Add styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Configuration Settings</h1>
     <form id="configForm">
         <label for="syncInterval">Sync Interval (in seconds):</label>
         <input type="text" id="syncInterval" name="syncInterval" required>
+        <br>
+        <label for="authParam">Authentication Parameter:</label>
+        <input type="text" id="authParam" name="authParam" required>
         <button type="submit" id="saveConfigButton">Save</button>
     </form>
     <script>
+        // Load saved values from localStorage if they exist
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('syncInterval').value = localStorage.getItem('syncInterval') || '';
+            document.getElementById('authParam').value = localStorage.getItem('authParam') || '';
+        });
+
+        // Save values to localStorage on form submission
         document.getElementById('configForm').onsubmit = function(event) {
             event.preventDefault();
+            localStorage.setItem('syncInterval', document.getElementById('syncInterval').value);
+            localStorage.setItem('authParam', document.getElementById('authParam').value);
             alert("Configuration Saved!");
         };
     </script>

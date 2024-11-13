@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Can add styles if needed in future -->
+    <link rel="stylesheet" href="styles.css"> <!-- Optional for styling -->
 </head>
 <body>
     <h1>Dashboard</h1>
@@ -15,11 +15,16 @@
     </div>
     <div id="recentOrders">
         <h2>Recent Orders</h2>
-        <p>No recent orders.</p>
+        <p id="ordersList">No recent orders.</p> <!-- Placeholder for future dynamic data -->
+    </div>
+    <div id="systemStatus">
+        <h2>System Status</h2>
+        <p id="status">Online</p>
     </div>
     <script>
         document.getElementById('refreshButton').onclick = function() {
-            document.getElementById('inventoryStatus').innerText = "Current Inventory: " + Math.floor(Math.random() * 200) + " items";
+            document.getElementById('inventoryStatus').innerText = 
+                "Current Inventory: " + Math.floor(Math.random() * 200) + " items";
             alert("Inventory Refreshed!");
         };
     </script>
